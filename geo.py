@@ -145,5 +145,5 @@ class Geo(object):
 if __name__ == '__main__':
     log.startLogging(sys.stdout)
     l = task.LoopingCall(Geo().get_unparsed)
-    l.start(0.3) # call every half-second
+    l.start(0.3)
     reactor.run()
