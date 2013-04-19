@@ -13,6 +13,11 @@ from random import choice
 
 provider = ['yandex', 'google', 'microsoft']
 
+host = 'localhost'
+database = 'db'
+user = 'login'
+password = 'password'
+
 provider_setting = {
     'google': {
         'format':'SET g_coord',
@@ -34,7 +39,7 @@ def format_set(provider):
 class Geo(object):
 
     def __init__(self):
-        self.dbpool = adbapi.ConnectionPool("psycopg2", host="192.168.1.213", database='obs', user='postgres',  password='Zona_baby009')
+        self.dbpool = adbapi.ConnectionPool("psycopg2", host, database, user,  password)
         log.msg("Открываем подключение к БД", system="Database")
 
     def get_unparsed(self):
