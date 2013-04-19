@@ -131,6 +131,7 @@ class Geo(object):
 
         current_provider = choice(provider)
 
+        ## ВЫбираем один не распарсенный адрес
         dOperation = self.dbpool.runQuery("SELECT id, gorod, street, dom FROM address WHERE y_coord IS NULL AND m_coord IS NULL AND g_coord IS NULL ORDER BY zipcode, street, dom LIMIT 1")
         log.msg("Берем данные из БД", system="Database select")
         
