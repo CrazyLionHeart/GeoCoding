@@ -11,12 +11,14 @@ import sys
 
 from random import choice
 
+# Задайте свой набор провайдеров - бессмысленно опрашивать google когда наступил лимит
 provider = ['yandex', 'google', 'microsoft']
 
 host = 'localhost'
 database = 'db'
 user = 'login'
 password = 'password'
+
 
 provider_setting = {
     'google': {
@@ -33,8 +35,6 @@ provider_setting = {
         },
 }
 
-def format_set(provider):
-    return 
 
 class Geo(object):
 
